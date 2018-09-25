@@ -1,0 +1,69 @@
+.opponents-list
+  display: flex
+  justify-content: space-between
+  //flex-wrap: wrap
+  margin: 0
+  padding: 0
+  list-style: none
+
+.opponents-list__col
+  display: flex
+  flex-direction: column
+
+.opponents-list__item
+  margin-bottom: 20px
+  padding-top: 25px
+  padding-bottom: 25px
+  padding-left: 26px
+  min-width: 444px
+  box-shadow: -2px 6px 20px 0px rgba(221, 221, 223, .8)
+
+.opponents-list__avatar
+  width: 49px
+  height: 49px
+  border-color: #e0e0e6
+
+
+
+
+.opponents-list__user-name
+  margin-top: 4px
+  margin-bottom: 8px
+  font-size: 16px
+  line-height: 16px
+  letter-spacing: $popup_ls
+
+.opponents-list__town-name
+  margin-bottom: 20px
+  padding-top: 4px
+  padding-bottom: 4px
+  font-size: 9px
+  line-height: 9px
+  color: #57575c
+  background-color: #e0e0e6
+
+.opponents-list__challenge-btn
+  align-self: flex-start
+  padding-left: 40px
+  padding-right: 19px
+  padding-top: 9px
+  padding-bottom: 10px
+  font-size: 10px
+  line-height: 10px
+  color: $popup-green-light
+  background-color: #fff
+  border: 2px solid $popup-green-light
+
+.opponents-list__challenge-btn::before
+  margin-top: -7px
+  width: 11px
+  height: 14px
+  background-image: url("../images/play_symbol.svg")
+  background-size: 11px 14px
+
+.opponents-list__challenge-btn:hover
+  color: #fff
+  background-color: $popup-green-light
+
+.opponents-list__challenge-btn:hover::before
+  background-image: url("../images/play_symbol-hover.svg")

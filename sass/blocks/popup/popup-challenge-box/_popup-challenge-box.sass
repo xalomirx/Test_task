@@ -1,0 +1,32 @@
+.popup-challenge-box__title
+  position: relative
+  margin: 0 auto
+  margin-bottom: 19px
+  padding-left: 52px
+  width: 462px
+  font-size: 20px
+  line-height: 25px
+  color: #636269
+
+.popup-challenge-box__title::before
+  position: absolute
+  left: 12px
+  content: ''
+  margin-top: -2px
+  width: 25px
+  height: 30px
+  background-image: url("../images/puzzle.svg")
+  background-repeat: no-repeat
+  background-size: 25px 30px
+
+.popup-challenge-box__opponent-control-wrap
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  margin-bottom: 24px
+
+@import popup-challenge-box__search-form/popup-challenge-box__search-form
+
+@import random-opponent-btn/random-opponent-btn
+
+@import opponents-list/opponents-list

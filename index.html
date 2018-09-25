@@ -19,9 +19,9 @@
           <a class="popup-user-card__profile-link user-card__profile-link" href="#">
             <img class="popup-user-card__avatar user-card__avatar" src="images/user_avatars/1_ava.jpg" alt="user-avatar">
           </a>
-          <div class="popup-user-card__user-info-wrap user-card__info-info-wrap">
+          <div class="popup-user-card__user-info-wrap user-card__info-wrap">
             <h4 class="popup-user-card__user-name user-card__user-name">Иван Иванов</h4>
-            <div class="popup-user-card__town-name-wrap">
+            <div class="popup-user-card__town-name-wrap user-card__town-name-wrap">
               <span class="popup-user-card__town-name user-card__town-name">Москва</span>
             </div>
           </div>
@@ -34,67 +34,107 @@
       </section>
       <section class="popup-challenge-box popup_container">
         <h3 class="popup-challenge-box__title">Бросьте вызов активному игроку!</h3>
-        <form class="search-form popup-challenge-box__search-form" action="#">
-          <input class="search popup-challenge-box__search" type="text" placeholder="Введите имя соперника">
-        </form>
-        <a class="btn random-opponent-btn" href="#">Найти случайного соперника</a>
+        <div class="popup-challenge-box__opponent-control-wrap">
+          <form class="search-form popup-challenge-box__search-form" action="#">
+            <input class="search popup-challenge-box__search-control" type="text" placeholder="Введите имя соперника">
+          </form>
+          <a class="btn random-opponent-btn" href="#">Найти случайного соперника</a>
+        </div>
         <ul class="opponents-list">
-          <li class="opponents-list__item user-card">
-            <a class="opponents-list__profile-link" href="#">
-              <img class="opponents-list__avatar" src="images/user_avatars/2_ava.jpg" alt="user-avatar">
-            </a>
-            <h4 class="opponents-list__user-name">Александра Долгополова</h4>
-            <span class="opponents-list__town-name">Москва</span>
-          </li>
-          <li class="opponents-list__item user-card">
-            <a class="opponents-list__profile-link" href="#">
-              <img class="opponents-list__avatar" src="images/user_avatars/3_ava.jpg" alt="user-avatar">
-            </a>
-            <h4 class="opponents-list__user-name">Анастасия Величкина</h4>
-            <span class="opponents-list__town-name">Санкт-Петербург</span>
-          </li>
-          <li class="opponents-list__item user-card">
-            <a class="opponents-list__profile-link" href="#">
-              <img class="opponents-list__avatar" src="images/user_avatars/default_ava.png" alt="user-avatar">
-            </a>
-            <h4 class="opponents-list__user-name">Андрей Сверидов</h4>
-            <span class="opponents-list__town-name">Новосибирск</span>
-          </li>
-          <li class="opponents-list__item user-card">
-            <a class="opponents-list__profile-link" href="#">
-              <img class="opponents-list__avatar" src="images/user_avatars/4_ava.jpg" alt="user-avatar">
-            </a>
-            <h4 class="opponents-list__user-name">Антон Михайлов</h4>
-            <span class="opponents-list__town-name">Томск</span>
-          </li>
-          <li class="opponents-list__item user-card">
-            <a class="opponents-list__profile-link" href="#">
-              <img class="opponents-list__avatar" src="images/user_avatars/5_ava.jpg" alt="user-avatar">
-            </a>
-            <h4 class="opponents-list__user-name">Илья Бодров</h4>
-            <span class="opponents-list__town-name">Новосибирск</span>
-          </li>
-          <li class="opponents-list__item user-card">
-            <a class="opponents-list__profile-link" href="#">
-              <img class="opponents-list__avatar" src="images/user_avatars/default_ava.png" alt="user-avatar">
-            </a>
-            <h4 class="opponents-list__user-name">Алина Морозова</h4>
-            <span class="opponents-list__town-name">Новосибирск</span>
-          </li>
-          <li class="opponents-list__item user-card">
-            <a class="opponents-list__profile-link" href="#">
-              <img class="opponents-list__avatar" src="images/user_avatars/6_ava.jpg" alt="user-avatar">
-            </a>
-            <h4 class="opponents-list__user-name">Сергей Мезенцев</h4>
-            <span class="opponents-list__town-name">Москва</span>
-          </li>
-          <li class="opponents-list__item user-card">
-            <a class="opponents-list__profile-link" href="#">
-              <img class="opponents-list__avatar" src="images/user_avatars/default_ava.png" alt="user-avatar">
-            </a>
-            <h4 class="opponents-list__user-name">Василий Медведев</h4>
-            <span class="opponents-list__town-name">Новосибирск</span>
-          </li>
+          <div class="opponents-list__col">
+            <li class="opponents-list__item user-card">
+              <a class="opponents-list__profile-link user-card__profile-link" href="#">
+                <img class="opponents-list__avatar user-card__avatar" src="images/user_avatars/2_ava.jpg" alt="user-avatar">
+              </a>
+              <div class="opponents-list__user-info-wrap user-card__user-info-wrap">
+                <h4 class="opponents-list__user-name user-card__user-name">Александра Долгополова</h4>
+                <div class="opponents-list__town-name-wrap user-card__town-name-wrap">
+                  <span class="opponents-list__town-name user-card__town-name">Москва</span>
+                </div>
+                <a class="btn opponents-list__challenge-btn opponents-list__challenge-btn--active" href="#">Бросить вызов</a>
+              </div>
+            </li>
+            <li class="opponents-list__item user-card">
+              <a class="opponents-list__profile-link user-card__profile-link" href="#">
+                <img class="opponents-list__avatar user-card__avatar" src="images/user_avatars/default_ava.png" alt="user-avatar">
+              </a>
+              <div class="opponents-list__user-info-wrap user-card__user-info-wrap">
+                <h4 class="opponents-list__user-name user-card__user-name">Андрей Сверидов</h4>
+                <div class="opponents-list__town-name-wrap user-card__town-name-wrap">
+                  <span class="opponents-list__town-name user-card__town-name">Новосибирск</span>
+                </div>
+              </div>
+            </li>
+            <li class="opponents-list__item user-card">
+              <a class="opponents-list__profile-link user-card__profile-link" href="#">
+                <img class="opponents-list__avatar user-card__avatar" src="images/user_avatars/5_ava.jpg" alt="user-avatar">
+              </a>
+              <div class="opponents-list__user-info-wrap user-card__user-info-wrap">
+                <h4 class="opponents-list__user-name user-card__user-name">Илья Бодров</h4>
+                <div class="opponents-list__town-name-wrap user-card__town-name-wrap">
+                  <span class="opponents-list__town-name user-card__town-name">Новосибирск</span>
+                </div>
+              </div>
+            </li>
+            <li class="opponents-list__item user-card">
+              <a class="opponents-list__profile-link user-card__profile-link" href="#">
+                <img class="opponents-list__avatar user-card__avatar" src="images/user_avatars/6_ava.jpg" alt="user-avatar">
+              </a>
+              <div class="opponents-list__user-info-wrap user-card__user-info-wrap">
+                <h4 class="opponents-list__user-name user-card__user-name">Сергей Мезенцев</h4>
+                <div class="opponents-list__town-name-wrap user-card__town-name-wrap">
+                  <span class="opponents-list__town-name user-card__town-name">Москва</span>
+                </div>
+              </div>
+            </li>
+          </div>
+
+          <div class="opponents-list__col">
+            <li class="opponents-list__item user-card">
+              <a class="opponents-list__profile-link user-card__profile-link" href="#">
+                <img class="opponents-list__avatar user-card__avatar" src="images/user_avatars/3_ava.jpg" alt="user-avatar">
+              </a>
+              <div class="opponents-list__user-info-wrap user-card__user-info-wrap">
+                <h4 class="opponents-list__user-name user-card__user-name">Анастасия Величкина</h4>
+                <div class="opponents-list__town-name-wrap user-card__town-name-wrap">
+                  <span class="opponents-list__town-name user-card__town-name">Санкт-Петербург</span>
+                </div>
+              </div>
+            </li>
+            <li class="opponents-list__item user-card">
+              <a class="opponents-list__profile-link user-card__profile-link" href="#">
+                <img class="opponents-list__avatar user-card__avatar" src="images/user_avatars/4_ava.jpg" alt="user-avatar">
+              </a>
+              <div class="opponents-list__user-info-wrap user-card__user-info-wrap">
+                <h4 class="opponents-list__user-name user-card__user-name">Антон Михайлов</h4>
+                <div class="opponents-list__town-name-wrap user-card__town-name-wrap">
+                  <span class="opponents-list__town-name user-card__town-name">Томск</span>
+                </div>
+              </div>
+            </li>
+            <li class="opponents-list__item user-card">
+              <a class="opponents-list__profile-link user-card__profile-link" href="#">
+                <img class="opponents-list__avatar user-card__avatar" src="images/user_avatars/default_ava.png" alt="user-avatar">
+              </a>
+              <div class="opponents-list__user-info-wrap user-card__user-info-wrap">
+                <h4 class="opponents-list__user-name user-card__user-name">Алина Морозова</h4>
+                <div class="opponents-list__town-name-wrap user-card__town-name-wrap">
+                  <span class="opponents-list__town-name user-card__town-name">Новосибирск</span>
+                </div>
+              </div>
+            </li>
+            <li class="opponents-list__item user-card">
+              <a class="opponents-list__profile-link user-card__profile-link" href="#">
+                <img class="opponents-list__avatar user-card__avatar" src="images/user_avatars/default_ava.png" alt="user-avatar">
+              </a>
+              <div class="opponents-list__user-info-wrap user-card__user-info-wrap">
+                <h4 class="opponents-list__user-name user-card__user-name">Василий Медведев</h4>
+                <div class="opponents-list__town-name-wrap user-card__town-name-wrap">
+                  <span class="opponents-list__town-name user-card__town-name">Новосибирск</span>
+                </div>
+              </div>
+            </li>
+          </div>
         </ul>
       </section>
     </div>

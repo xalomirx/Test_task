@@ -1,100 +1,16 @@
 .popup-user-info
   display: flex
   align-items: center
+  margin-bottom: 20px
   padding-top: 18px
   padding-bottom: 18px
   background-image: linear-gradient(to top, #e9e8eb, #e7dfe3)
 
-.popup-user-card
-  margin-right: 171px
+@import popup-user-card/popup-user-card
 
-.popup-user-card__profile-link
-  margin-right: 19px
+@import hectare-info/hectare-info
 
-.popup-user-card__avatar
-  width: 62px
-  height: 62px
-  border: 2px solid rgba(61, 214, 105, .4)
-  border-radius: 50%
+@import users-rating-btn/users-rating-btn
 
-.popup-user-card__user-info-wrap
-  display: flex
-  flex-direction: column
-
-.popup-user-card__user-name
-  margin-top: 6px
-  margin-bottom: 10px
-  font-size: 20px
-  line-height: $popup-lh
-  letter-spacing: $popup-ls
-
-.popup-user-card__town-name
-  display: inline-block
-  padding-top: 5px
-  padding-right: 13px
-  padding-bottom: 5px
-  padding-left: 13px
-  font-size: 10px
-  line-height: 10px
-  color: #486c4b
-  background-color: rgba(61, 214, 105, .4)
-  border-radius: 25px
-
-//hectare
-.hectare-info
-  position: relative
-  padding-left: 58px
-
-.hectare-info::before
-  position: absolute
-  left: 0
-  content: ""
-  width: 42px
-  height: 42px
-  background-color: #a287d6
-  background-image: url("../images/map_point.svg")
-  background-repeat: no-repeat
-  background-position: center center
-  background-size: 25px auto
-  border: 2px solid #f4f2f5
-  border-radius: 50%
-
-.hectare-info__count
-  font-size: 17px
-  line-height: $popup-lh
-
-.hectare-info__text
-  margin: 0
-  font-weight: 700
-  line-height: $popup-lh
-
-.users-rating-btn
-  position: relative
-  display: inline-block
-  margin-left: auto
-  padding-top: 13px
-  padding-bottom: 13px
-  padding-left: 47px
-  padding-right: 20px
-  color: #fff
-  text-decoration: none
-  border-radius: 25px
-  background-color: $popup-green-light
-
-.users-rating-btn::before
-  position: absolute
-  top: 50%
-  left: 18px
-  content: ''
-  margin-top: -9px
-  width: 18px
-  height: 18px
-  background-image: url("../images/star.svg")
-  background-repeat: no-repeat
-  background-size: 18px auto
-
-.users-rating-btn:hover,
-.users-rating-btn:focus
-  background-color: #45df70
 
 
