@@ -1,0 +1,39 @@
+
+.popup-header
+  position: relative
+  padding-top: 17px
+  padding-bottom: 17px
+  background-image: linear-gradient(#444483, #9782ae)
+  border-top-left-radius: 2px
+  border-top-right-radius: 2px
+
+.popup-header__cross
+  position: absolute
+  top: 15px
+  right: 28px
+  width: 17px
+  height: 17px
+  cursor: pointer
+
+.popup-header__cross::before,
+.popup-header__cross::after
+  position: absolute
+  left: 50%
+  margin-left: -2px
+  content: ''
+  height: 20px
+  width: 2px
+  background-color: #fff
+
+.popup-header__cross::before
+  transform: rotate(45deg)
+
+.popup-header__cross::after
+  transform: rotate(-45deg)
+
+.popup-header__title
+  margin: 0
+  font-size: 14px
+  line-height: 15px
+  letter-spacing: $popup-ls
+  color: #fff
