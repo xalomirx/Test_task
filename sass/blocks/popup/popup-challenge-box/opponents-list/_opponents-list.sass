@@ -1,7 +1,7 @@
 .opponents-list
   display: flex
   justify-content: space-between
-  //flex-wrap: wrap
+  flex-wrap: wrap
   margin: 0
   padding: 0
   list-style: none
@@ -22,9 +22,6 @@
   width: 49px
   height: 49px
   border-color: #e0e0e6
-
-
-
 
 .opponents-list__user-name
   margin-top: 4px
@@ -67,3 +64,29 @@
 
 .opponents-list__challenge-btn:hover::before
   background-image: url("../images/play_symbol-hover.svg")
+
+@media (max-width: 1024px)
+  .opponents-list
+    flex-direction: column
+
+  .opponents-list__item:nth-child(odd)
+    align-self: flex-start
+
+  .opponents-list__item:nth-child(even)
+    align-self: flex-end
+
+@media (max-width: 530px)
+  .opponents-list__item
+    min-width: 320px
+    width: 100%
+    padding-left: 5.5%
+
+  .opponents-list__item:nth-child(even)
+    align-self: flex-start
+
+
+
+
+
+
+

@@ -429,12 +429,6 @@ html {
 *::after {
   box-sizing: inherit; }
 
-.container {
-  width: 1024px;
-  padding-top: 30px;
-  padding-left: 30px;
-  padding-right: 30px; }
-
 .btn {
   position: relative;
   padding-top: 13px;
@@ -497,7 +491,9 @@ html {
   border-radius: 25px; }
 
 .popup_container {
+  margin: 0 auto;
   max-width: 964px;
+  min-width: 320px;
   padding-right: 28px;
   padding-left: 28px; }
 
@@ -507,6 +503,13 @@ html {
   color: #1d1e20;
   font-size: 12px; }
 
+@media (max-width: 1024px) {
+  .popup_container {
+    max-width: 95%; } }
+@media (max-width: 425px) {
+  .popup_container {
+    padding-right: 10px;
+    padding-left: 10px; } }
 .popup-header {
   position: relative;
   padding-top: 17px;
@@ -554,9 +557,26 @@ html {
   padding-bottom: 18px;
   background-image: linear-gradient(to top, #e9e8eb, #e7dfe3); }
 
+@media (max-width: 1024px) {
+  .popup-user-info {
+    justify-content: space-between;
+    flex-wrap: wrap; } }
+@media (max-width: 700px) {
+  .popup-user-info {
+    justify-content: flex-start; } }
+@media (max-width: 700px) and (max-width: 425px) {
+  .popup-user-info {
+    flex-direction: column; } }
 .popup-user-card {
   margin-right: 171px; }
 
+@media (max-width: 1024px) {
+  .popup-user-card {
+    margin-right: 0; } }
+@media (max-width: 700px) {
+  .popup-user-card {
+    margin-bottom: 19px;
+    width: 100%; } }
 .hectare-info {
   position: relative;
   padding-left: 58px; }
@@ -584,6 +604,9 @@ html {
   font-weight: 700;
   line-height: 20px; }
 
+@media (max-width: 425px) {
+  .hectare-info {
+    margin-bottom: 19px; } }
 .users-rating-btn {
   margin-left: auto;
   box-shadow: -1px 3px 15px 0px rgba(110, 240, 85, 0.6); }
@@ -592,6 +615,15 @@ html {
   background-image: url("../images/star.svg");
   background-size: 18px auto; }
 
+@media (max-width: 1024px) {
+  .users-rating-btn {
+    margin-left: 0; } }
+@media (max-width: 700px) {
+  .users-rating-btn {
+    margin-left: auto; } }
+@media (max-width: 425px) {
+  .users-rating-btn {
+    margin-left: 0; } }
 .popup-challenge-box__title {
   position: relative;
   margin: 0 auto;
@@ -619,6 +651,24 @@ html {
   align-items: flex-start;
   margin-bottom: 24px; }
 
+@media (max-width: 850px) {
+  .popup-challenge-box__opponent-control-wrap {
+    flex-direction: column;
+    align-items: center; } }
+@media (max-width: 530px) {
+  .popup-challenge-box__title {
+    padding-top: 45px;
+    padding-left: 0;
+    width: 91%;
+    text-align: center; }
+
+  .popup-challenge-box__title::before {
+    top: 0;
+    left: 50%;
+    margin-left: -20px;
+    width: 30px;
+    height: 40px;
+    background-size: 30px 40px; } }
 .popup-challenge-box__search-form {
   position: relative; }
 
@@ -648,6 +698,19 @@ html {
   border-radius: 25px;
   outline: none; }
 
+@media (max-width: 850px) {
+  .popup-challenge-box__search-form {
+    margin-bottom: 19px; } }
+@media (max-width: 530px) {
+  .popup-challenge-box__search-form {
+    align-self: flex-start;
+    max-width: 259px; }
+
+  .popup-challenge-box__search-control {
+    padding-right: 20px; } }
+@media (max-width: 425px) {
+  .popup-challenge-box__search-form {
+    align-self: center; } }
 .random-opponent-btn {
   padding-top: 9px;
   padding-bottom: 9px;
@@ -671,9 +734,16 @@ html {
 .random-opponent-btn:hover::before {
   background-image: url("../images/user_silhouette-hover.svg"); }
 
+@media (max-width: 530px) {
+  .random-opponent-btn {
+    align-self: flex-end; } }
+@media (max-width: 425px) {
+  .random-opponent-btn {
+    align-self: center; } }
 .opponents-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -736,5 +806,23 @@ html {
 
 .opponents-list__challenge-btn:hover::before {
   background-image: url("../images/play_symbol-hover.svg"); }
+
+@media (max-width: 1024px) {
+  .opponents-list {
+    flex-direction: column; }
+
+  .opponents-list__item:nth-child(odd) {
+    align-self: flex-start; }
+
+  .opponents-list__item:nth-child(even) {
+    align-self: flex-end; } }
+@media (max-width: 530px) {
+  .opponents-list__item {
+    min-width: 320px;
+    width: 100%;
+    padding-left: 5.5%; }
+
+  .opponents-list__item:nth-child(even) {
+    align-self: flex-start; } }
 
 /*# sourceMappingURL=style.css.map */

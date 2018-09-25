@@ -1,5 +1,7 @@
 .popup_container
+  margin: 0 auto
   max-width: 964px
+  min-width: 320px
   padding-right: 28px
   padding-left: 28px
 
@@ -9,6 +11,14 @@
   color: $popup-text-black
   font-size: $popup_fz
 
+@media (max-width: 1024px)
+  .popup_container
+    max-width: 95%
+
+@media (max-width: 425px)
+  .popup_container
+    padding-right: 10px
+    padding-left: 10px
 
 //import popup__header block
 @import popup-header/popup-header
