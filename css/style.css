@@ -62,6 +62,7 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   /* 1 */
   height: 0;
@@ -110,6 +111,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */ }
 
@@ -300,6 +302,7 @@ input {
  */
 [type="checkbox"],
 [type="radio"] {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -350,6 +353,7 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   display: table;
@@ -422,11 +426,13 @@ template {
   display: none; }
 
 html {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 *,
 *::before,
 *::after {
+  -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
 .btn {
@@ -455,6 +461,8 @@ html {
   background-color: #45df70; }
 
 .user-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex; }
 
 .user-card__profile-link {
@@ -468,7 +476,12 @@ html {
   border-radius: 50%; }
 
 .user-card__user-info-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column; }
 
 .user-card__user-name {
@@ -514,6 +527,7 @@ html {
   position: relative;
   padding-top: 17px;
   padding-bottom: 17px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#444483), to(#9782ae));
   background-image: linear-gradient(#444483, #9782ae);
   border-top-left-radius: 2px;
   border-top-right-radius: 2px; }
@@ -537,35 +551,49 @@ html {
   background-color: #fff; }
 
 .popup-header__cross::before {
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg); }
 
 .popup-header__cross::after {
+  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg); }
 
 .popup-header__title {
   margin: 0;
   font-size: 14px;
-  line-height: 15px;
   letter-spacing: 0.02em;
   color: #fff; }
 
 .popup-user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-bottom: 20px;
   padding-top: 18px;
   padding-bottom: 18px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#e9e8eb), to(#e7dfe3));
   background-image: linear-gradient(to top, #e9e8eb, #e7dfe3); }
 
 @media (max-width: 1024px) {
   .popup-user-info {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap; } }
 @media (max-width: 700px) {
   .popup-user-info {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start; } }
 @media (max-width: 700px) and (max-width: 425px) {
   .popup-user-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column; } }
 .popup-user-card {
   margin-right: 171px; }
@@ -609,6 +637,7 @@ html {
     margin-bottom: 19px; } }
 .users-rating-btn {
   margin-left: auto;
+  -webkit-box-shadow: -1px 3px 15px 0px rgba(110, 240, 85, 0.6);
   box-shadow: -1px 3px 15px 0px rgba(110, 240, 85, 0.6); }
 
 .users-rating-btn::before {
@@ -646,14 +675,25 @@ html {
   background-size: 25px 30px; }
 
 .popup-challenge-box__opponent-control-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
   margin-bottom: 24px; }
 
 @media (max-width: 850px) {
   .popup-challenge-box__opponent-control-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center; } }
 @media (max-width: 530px) {
   .popup-challenge-box__title {
@@ -703,6 +743,7 @@ html {
     margin-bottom: 19px; } }
 @media (max-width: 530px) {
   .popup-challenge-box__search-form {
+    -ms-flex-item-align: start;
     align-self: flex-start;
     max-width: 259px; }
 
@@ -710,6 +751,7 @@ html {
     padding-right: 20px; } }
 @media (max-width: 425px) {
   .popup-challenge-box__search-form {
+    -ms-flex-item-align: center;
     align-self: center; } }
 .random-opponent-btn {
   padding-top: 9px;
@@ -736,20 +778,32 @@ html {
 
 @media (max-width: 530px) {
   .random-opponent-btn {
+    -ms-flex-item-align: end;
     align-self: flex-end; } }
 @media (max-width: 425px) {
   .random-opponent-btn {
+    -ms-flex-item-align: center;
     align-self: center; } }
 .opponents-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none; }
 
 .opponents-list__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column; }
 
 .opponents-list__item {
@@ -758,6 +812,7 @@ html {
   padding-bottom: 25px;
   padding-left: 26px;
   min-width: 444px;
+  -webkit-box-shadow: -2px 6px 20px 0px rgba(221, 221, 223, 0.8);
   box-shadow: -2px 6px 20px 0px rgba(221, 221, 223, 0.8); }
 
 .opponents-list__avatar {
@@ -782,6 +837,7 @@ html {
   background-color: #e0e0e6; }
 
 .opponents-list__challenge-btn {
+  -ms-flex-item-align: start;
   align-self: flex-start;
   padding-left: 40px;
   padding-right: 19px;
@@ -809,12 +865,17 @@ html {
 
 @media (max-width: 1024px) {
   .opponents-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column; }
 
   .opponents-list__item:nth-child(odd) {
+    -ms-flex-item-align: start;
     align-self: flex-start; }
 
   .opponents-list__item:nth-child(even) {
+    -ms-flex-item-align: end;
     align-self: flex-end; } }
 @media (max-width: 530px) {
   .opponents-list__item {
@@ -823,6 +884,5 @@ html {
     padding-left: 5.5%; }
 
   .opponents-list__item:nth-child(even) {
+    -ms-flex-item-align: start;
     align-self: flex-start; } }
-
-/*# sourceMappingURL=style.css.map */
