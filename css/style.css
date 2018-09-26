@@ -837,6 +837,7 @@ html {
   background-color: #e0e0e6; }
 
 .opponents-list__challenge-btn {
+  display: none;
   -ms-flex-item-align: start;
   align-self: flex-start;
   padding-left: 40px;
@@ -848,6 +849,9 @@ html {
   color: #34c55d;
   background-color: #fff;
   border: 2px solid #34c55d; }
+
+.opponents-list__challenge-btn--active {
+  display: block; }
 
 .opponents-list__challenge-btn::before {
   margin-top: -7px;
